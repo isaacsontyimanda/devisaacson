@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #0866ff;
+      }
+    </style>
+  </defs>
+  <g id="facebook">
+    <rect class="cls-2" x="16.36" y="21.54" width="1036.64" height="1031.86" rx="115.61" ry="115.61"/>
+    <path class="cls-1" d="M597.48,1053.4h-188.01v-358.03h-106.88v-158.39h106.88v-68.25c0-176.42,79.84-258.19,253.04-258.19,32.83,0,89.5,6.44,112.68,12.88v143.58c-12.24-1.29-33.48-1.93-59.88-1.93-84.99,0-117.82,32.19-117.82,115.89v56.02h169.3l-29.08,158.39h-140.22v358.03Z"/>
+  </g>
+</svg>

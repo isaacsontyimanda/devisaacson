@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Gradiente_sem_nome_2);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: url(#Gradiente_sem_nome_3);
+      }
+    </style>
+    <radialGradient id="Gradiente_sem_nome_3" data-name="Gradiente sem nome 3" cx="82.07" cy="868.85" fx="82.07" fy="868.85" r="259.78" gradientTransform="translate(-1.2 5356.11) scale(4.97 -4.95)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fd5"/>
+      <stop offset=".33" stop-color="#ff543f"/>
+      <stop offset=".35" stop-color="#fc5245"/>
+      <stop offset=".5" stop-color="#e64771"/>
+      <stop offset=".64" stop-color="#d53e91"/>
+      <stop offset=".76" stop-color="#cc39a4"/>
+      <stop offset=".84" stop-color="#c837ab"/>
+    </radialGradient>
+    <radialGradient id="Gradiente_sem_nome_2" data-name="Gradiente sem nome 2" cx="38.13" cy="1082.28" fx="38.13" fy="1082.28" r="172.49" gradientTransform="translate(-1.2 3579.17) scale(4.97 -3.3)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4168c9"/>
+      <stop offset="1" stop-color="#4168c9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g id="instagram">
+    <path class="cls-3" d="M828.31,1052.86l-575.61.54c-126.63.11-230.33-102.9-230.47-228.95l-.55-572.95c-.12-126.05,103.38-229.27,230.01-229.41l575.61-.54c126.63-.11,230.33,102.9,230.47,228.95l.55,572.95c.14,126.08-103.38,229.3-230.01,229.41Z"/>
+    <path class="cls-1" d="M828.31,1052.86l-575.61.54c-126.63.11-230.33-102.9-230.47-228.95l-.55-572.95c-.12-126.05,103.38-229.27,230.01-229.41l575.61-.54c126.63-.11,230.33,102.9,230.47,228.95l.55,572.95c.14,126.08-103.38,229.3-230.01,229.41Z"/>
+    <path class="cls-2" d="M540.01,738.02c-111.06,0-201.46-89.95-201.46-200.53s90.4-200.53,201.46-200.53,201.46,89.95,201.46,200.53-90.4,200.53-201.46,200.53ZM540.01,394.25c-79.35,0-143.9,64.26-143.9,143.24s64.55,143.24,143.9,143.24,143.9-64.26,143.9-143.24-64.55-143.24-143.9-143.24Z"/>
+    <ellipse class="cls-2" cx="755.87" cy="322.63" rx="43.17" ry="42.97"/>
+    <path class="cls-2" d="M712.7,909.9h-345.36c-111.06,0-201.46-89.95-201.46-200.53v-343.77c0-110.58,90.4-200.53,201.46-200.53h345.36c111.06,0,201.46,89.95,201.46,200.53v343.77c0,110.58-90.4,200.53-201.46,200.53ZM367.33,222.36c-79.35,0-143.9,64.26-143.9,143.24v343.77c0,78.98,64.55,143.24,143.9,143.24h345.36c79.35,0,143.9-64.26,143.9-143.24v-343.77c0-78.98-64.55-143.24-143.9-143.24h-345.36Z"/>
+  </g>
+</svg>

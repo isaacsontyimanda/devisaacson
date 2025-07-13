@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Dev_Isaacson | Web Designer, UI/UX e Designer Gráfico</title>
+  <meta name="description" content="Portfólio de Dev_Isaacson, especialista em Web Design, UI/UX e Design Gráfico. Interfaces modernas e criativas com HTML, CSS e JavaScript.">
+  <meta name="keywords" content="Dev_Isaacson, Portfólio, Web Designer, UI UX, Designer Gráfico, HTML, CSS, JavaScript, Angola, Frontend, Luanda">
+  <meta name="author" content="Isaacson Tchimanda">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dev_Isaacson | Web Designer, UI/UX e Designer Gráfico">
+  <meta property="og:description" content="Veja os projetos de Dev_Isaacson — interfaces modernas e responsivas.">
+  <meta property="og:image" content="https://devisaacson.site/preview.jpg">
+  <meta property="og:url" content="https://devisaacson.site">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dev_Isaacson | Web Designer e UI/UX">
+  <meta name="twitter:description" content="Conheça o portfólio profissional de Isaacson Tchimanda.">
+  <meta name="twitter:image" content="https://devisaacson.site/preview.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="public/favicon.webp" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
+</head>
+<body id="home">
+  <div id="loader">
+    <img src="loader/loader-di.svg" alt="Carregando..." class="svg-loader" />
+  </div>
+  <header class="card-header">
+    <div>
+      <a href="index.html"><img src="public/logo-dark.webp" alt="Logo Dev Isaacson" class="logo logo-dark"></a>
+      <a href="index.html"><img src="public/logo-light.webp" alt="Logo Dev Isaacson" class="logo logo-light"></a>
+    </div>
+    <div class="menu-button" id="menuBtn">
+      <div class="line line1"></div>
+      <div class="line line2"></div>
+      <div class="line line3"></div>
+    </div>
+  </header>
+  <div class="sidebar" id="sidebar">
+    <a href="#home"><i class="fas fa-house"></i> Home</a>
+    <a href="#sobre"><i class="fas fa-user"></i> Sobre</a>
+    <a href="#projetos"><i class="fas fa-folder-open"></i> Projetos</a>
+    <a href="#habilidades"><i class="fas fa-laptop-code"></i> Habilidades</a>
+    <a href="#servicos"><i class="fas fa-tools"></i> Serviços</a>
+    <a href="#depoimentos"><i class="fas fa-comment-dots"></i> Depoimentos</a>
+    <a href="#contato"><i class="fas fa-envelope"></i> Contato</a>
+  </div>
+  <main id="content" class="content fade-in-init">
+    <button id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+      <i class="fas fa-moon"></i>
+    </button>
+    <section class="home">
+    <div class="profile-area">
+    <img src="img/isaacson/profile1.webp" alt="foto de Isaacson" class="profile1"/>
+  </div>
+  <div class="text-area">
+    <h1>Olá, sou o Isaacson</h1>
+    <div class="apresent">
+      <p>
+        Web Designer, UI / UX e Designer Gráfico focado em soluções criativas, intuitivas e responsivas.
+      </p>
+    </div>
+    <div class="links-ap">
+      <a href="#contato" class="btn-ap" aria-label="Ir para a seção de contato" title="Ir para a seção de contato">
+        <i class="fas fa-comments"></i> CONVERSAR
+      </a>
+      <a href="#projetos" class="btn-ap"
+        aria-label="Ir para a seção de projetos" title="Ir para a seção de projetos">
+        <i class="fas fa-folder-open"></i> VER PROJETOS
+      </a>
+  </div>
+  </div>
+</section>
+<section class="about-s reveal">
+  <h2 id="sobre" class="title-h">Sobre Mim</h2>
+  <div class="about">
+    <div class="text">
+      <p class="reveal">
+        Sou apaixonado por tecnologia e design. Com mais de 3 anos de experiência, atuo como designer gráfico e UI / UX, além de desenvolver interfaces web modernas com HTML, CSS e JavaScript. Meu foco é criar soluções criativas, funcionais e com ótima experiência de uso.
+      </p>
+      <a href="docs/Curriculo_Isaacson_2025.pdf" class="link-cv" target="_blank" rel="noopener noreferrer" aria-label="Ver Currículo em PDF" title="Ver Currículo em PDF">
+       <i class="fas fa-file-pdf"></i> Ver Currículo
+    </a>
+    </div>
+    <img src="img/isaacson/profile2.webp" alt="foto 2 de Isaacson" class="profile2 reveal"/>
+  </div>
+</section>
+<section class="project reveal">
+  <h2 id="projetos" class="title-h reveal delay-1">Projetos</h2>
+  <p class="text-h reveal delay-2">
+    Confira meus projetos mais recentes, que refletem minha paixão por design e desenvolvimento.
+  </p>
+  <div class="proj-grid">
+    
+    <div class="bg-proj">
+      <div class="reveal delay-3">
+        <h3>🌐 Happy Birthday <span class="tag">Web</span></h3>
+        <div class="slider-container">
+          <div class="slide">
+            <img src="img/projects/web/projeto1.webp" alt="foto do projeto 1"/>
+          </div>
+        </div>
+        <p class="desc">Momento especial, agora digital.</p>
+        <p><strong>Tecnologias:</strong> HTML5, CSS3, JS</p>
+        <a href="https://isaacsontyimanda.github.io/happybirthday/" target="_blank" rel="noopener noreferrer" class="link-proj" aria-label="Abrir o projeto de aniversário no GitHub Pages" title="Abrir no GitHub">🔗 Abrir no GitHub
+        </a>
+      </div>
+    </div>
+    <div class="bg-proj">
+      <div class="reveal delay-4">
+        <h3>🎨 Hotel Vivace <span class="tag">UI/UX</span></h3>
+        <div class="slider-container">
+          <div class="slide">
+            <img src="img/projects/ui_ux/projeto2.webp" alt="foto do projeto 2"/>
+          </div>
+        </div>
+        <p class="desc">Design UI/UX desenvolvido para site de hotel.</p>
+        <p><strong>Tecnologias:</strong> Figma, Illustrator</p>
+        <a href="https://www.figma.com/proto/HFLFzanokPs2if9NyOyOQo/vivace-ui-design?node-id=8-27&t=2qvRd6GdDz3UNJt7-1" target="_blank" rel="noopener noreferrer" class="link-proj" aria-label="Abrir protótipo Vivace UI Design no Figma" title="Abrir no Figma">🔗 Abrir no Figma
+        </a>
+      </div>
+    </div>
+    
+    <div class="bg-proj">
+      <div class="reveal delay-5">
+        <h3>🖼️ Designs Gráficos</h3>
+        <div class="slider-container">
+          <div class="slider" id="slider" style="display: flex; transition: transform 0.5s ease;">
+          <div class="slide" data-descricao="Logo Dev Isaacson: Logo pessoal">
+              <img src="img/projects/design/projeto1.webp" alt="Logo Isaacson" />
+            </div>
+            <div class="slide" data-descricao="Flyer para hamburgaria: Amanda">
+              <img src="img/projects/design/projeto2.webp" alt="Flyer Amanda" />
+            </div>
+            <div class="slide" data-descricao="Logo moderna para Educalar: António">
+              <img src="img/projects/design/projeto3.webp" alt="Logo Educalar" />
+            </div>
+            <div class="slide" data-descricao="Flyer para cursos particulares: Jeremias">
+              <img src="img/projects/design/projeto4.webp" alt="Flyer Cursos" />
+            </div>
+            <div class="slide" data-descricao="Logo moderna para redes sociais">
+              <img src="img/projects/design/projeto5.webp" alt="Logo Social" />
+            </div>
+            <div class="slide" data-descricao="Template simples para eventos noturnos">
+              <img src="img/projects/design/projeto6.webp" alt="Template Eventos" />
+            </div>
+          </div>
+        </div>
+        <p class="desc" id="desc-slide">Logo Dev Isaacson</p>
+        <p><strong>Tecnologias:</strong> Photoshop, Illustrator</p>
+        <a href="https://www.behance.net/isaacsontyimanda" target="_blank" rel="noopener noreferrer" class="link-proj" aria-label="Abrir perfil de Isaacson no Behance" title="Abrir no Behance">🔗 Abrir no Behance
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<h2 id="habilidades" class="title-h reveal delay-1">Habilidades</h2>
+<p class="text-h reveal delay-2">
+  Minhas habilidades incluem as seguintes tecnologias:
+</p>
+<section class="hab reveal delay-3">
+  <h3 class="w-d reveal delay-3">WEB-DESIGN</h3>
+  <div class="web">
+    <div class="reveal delay-2"><img src="img/icons/html-5_5968267 1.png" alt="ícone de HTML5" class="h"></div>
+    <div class="reveal delay-3"><img src="img/icons/css-3_5968242 1.png" alt="ícone de CSS3" class="h"></div>
+    <div class="reveal delay-4"><img src="img/icons/js_5968292 1.png" alt="ícone de JS" class="h"></div>
+  </div>
+  <h3 class="w-d reveal delay-4">DESIGN GRÁFICO & UI / UX</h3>
+  <div class="design">
+    <div class="reveal delay-5"><img src="img/icons/appIcon2x 2.png" alt="ícone de Adobe Illustrator" class="h"></div>
+    <div class="reveal delay-6"><img src="img/icons/appIcon2x 3.png" alt="ícone de Adobe Photoshop" class="h"></div>
+    <div class="reveal delay-7"><img src="img/icons/icon-figma.png" alt="ícone de Figma" class="h"></div>
+  </div>
+</section>
+<section class="servicos reveal delay-4">
+  <h2 id="servicos" class="title-h reveal delay-5">Serviços</h2>
+  <p class="text-h reveal delay-6">O que posso fazer por você?</p>
+  <div class="services">
+  <div class="services-grid">
+    <!-- Serviço funcional -->
+    <div class="reveal delay-3">
+      <div class="service-card" aria-label="Serviço de Design Gráfico" title="Design Gráfico: Criação de artes para redes sociais, flyers, banners e mais.">
+        <h3>🎨 Design Gráfico</h3>
+        <p>Criação de artes para redes sociais, flyers, banners e muito mais.</p>
+      </div>
+    </div>
+    <!-- Serviço funcional -->
+    <div class="reveal delay-4">
+      <div class="service-card" aria-label="Serviço de UI e UX Design" title="UI / UX Design: Protótipos modernos com foco na experiência do usuário.">
+        <h3>🧩 UI / UX Design</h3>
+        <p>Protótipos modernos e responsivos com foco na experiência do usuário.</p>
+      </div>
+    </div>
+    <!-- Serviço riscado / futuro -->
+    <div class="reveal delay-5">
+      <div class="service-card service-disabled" aria-label="Serviço de Desenvolvimento Web (em breve)" title="Desenvolvimento Web: Disponível em breve.">
+        <h3>
+          <s>💻 Desenvolvimento Web</s>
+          <span class="badge" aria-hidden="true">Em breve</span>
+        </h3>
+        <p><s>Criação de sites modernos, responsivos e otimizados.</s></p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="dep reveal delay-5">
+  <h2 id="depoimentos" class="title-h reveal delay-6">Depoimentos</h2>
+  <p class="text-h reveal delay-7">Resultados que falam por si:</p>
+  <div class="reveal delay-3">
+    <img src="img/depoiments/amanda.webp" alt="foto do cliente Gabriel">
+    <p>"O flyer para a hamburgueria ficou simplesmente sensacional! Chamou muita atenção no Instagram e aumentou os pedidos no delivery." <strong>Amanda</strong></p>
+  </div>
+  <div class="reveal delay-4">
+    <img src="img/depoiments/jeremias.webp" alt="foto do cliente Jeremias">
+    <p>"O design para minhas aulas particulares foi direto ao ponto: informativo, bonito e profissional. Recomendo 100%." <strong>Jeremias</strong></p>
+  </div>
+  <div class="reveal delay-5">
+    <img src="img/depoiments/antonio.webp" alt="foto do cliente António">
+    <p>"Fiquei impressionado com a criatividade no logo. Captou a essência da minha marca em um visual forte e memorável." <strong>António</strong></p>
+  </div>
+</section>
+  <!-- Título e descrição fora da section com fundo -->
+<h2 id="contato" class="title-h reveal dalay-6">Contato</h2>
+<p class="text-h reveal delay-6">
+  Tem uma ideia, projeto ou dúvida? Envie uma mensagem e vamos conversar!
+</p>
+<section class="about-s cont reveal delay-6">
+  <h3>Tem algo em mente? Escreve aí ✍️</h3>
+  <form id="contato-form" class="s-inp">
+    <input type="text" name="name" id="t-name" placeholder="Insira seu nome" autocomplete="name" required>
+    <input type="email" name="email" id="t-email" placeholder="Insira seu e-mail" autocomplete="email" required>
+    <input type="text" name="title" id="t-title" placeholder="Assunto (opcional)">
+    <textarea name="message" id="t-sms" placeholder="Escreva sua mensagem" required></textarea>
+    <button type="submit" aria-label="Enviar mensagem do formulário de contato" title="Enviar mensagem">ENVIAR MENSAGEM</button>
+    <p id="status-msg"></p>
+  </form>
+</section>
+  </main>
+  <footer>
+  <div class="foot reveal" data-reveal="bottom" data-reveal-delay="200">
+    <div>
+      <h2><a href="index.html" class="highlight-title">Dev_Isaacson</a></h2>
+      <p><a href="tel:+244972783562" class="contact-link">☎️ Ligue para mim</a></p>
+      <p>
+        <a href="https://maps.app.goo.gl/pVCWjWGFsnzwFthn6"
+          rel="noopener noreferrer"
+          target="_blank"
+          class="contact-link map-link">
+          🏡 Luanda, Luanda Sul
+        </a>
+      </p>
+      <div class="map-container">
+        <p>🏡</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31532.98122170358!2d13.171665004573804!3d-8.914627885462512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f523ec46ce8f%3A0x669438a3b2ea2dae!2sLuanda%20Sul%2C%20Belas!5e0!3m2!1spt-PT!2sao!4v1752243928566!5m2!1spt-PT!2sao"
+          width="100%"
+          height="200"
+          style="border:0; border-radius: 8px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+    <div class="exp reveal" data-reveal="bottom" data-reveal-delay="400">
+  <h2>Explore mais</h2>
+  <p>
+    <a href="https://github.com/isaacsontyimanda" target="_blank" rel="noopener noreferrer" class="links-ex"
+       aria-label="Ver projetos no GitHub de Isaacson" title="Ver projetos no GitHub de Isaacson">🔗 GitHub</a>
+  </p>
+  <p>
+    <a href="https://www.behance.net/isaacsontyimanda" target="_blank" rel="noopener noreferrer" class="links-ex"
+       aria-label="Ver portfólio no Behance de Isaacson" title="Ver portfólio no Behance de Isaacson">🔗 Behance</a>
+  </p>
+  <p>
+    <a href="https://www.linkedin.com/in/isaacsontyimanda/" target="_blank" rel="noopener noreferrer" class="links-ex"
+       aria-label="Visitar perfil do LinkedIn de Isaacson" title="Visitar perfil do LinkedIn de Isaacson">🔗 Linkedin</a>
+  </p>
+</div>
+    <div class="newsl reveal" data-reveal="bottom" data-reveal-delay="600">
+      <h2>Fique por dentro de tudo!</h2>
+      <form id="newsletter-form">
+        <div>
+          <input type="text" name="subscriber_name" required placeholder="Insira seu nome" autocomplete="name">
+          <input type="email" name="subscriber_email" id="newsl" placeholder="Insira seu email" autocomplete="email" required>
+          <input type="submit" value="Inscrever-se" aria-label="Enviar inscrição" title="Enviar inscrição">
+        </div>
+        <p id="newsletter-status"></p>
+      </form>
+    </div>
+    <div class="social reveal" data-reveal="bottom" data-reveal-delay="800">
+  <h2 id="social-media">Redes Sociais</h2>
+  <div>
+    <a href="https://www.facebook.com/devisaacson18" target="_blank" rel="noopener noreferrer"
+       aria-label="Abrir Facebook de Isaacson" title="Abrir Facebook de Isaacson">
+      <img src="img/icons/facebook.svg" alt="ícone de facebook">
+    </a>
+    <a href="https://www.instagram.com/dev_isaacson" target="_blank" rel="noopener noreferrer"
+       aria-label="Abrir Instagram de Isaacson" title="Abrir Instagram de Isaacson">
+      <img src="img/icons/instagram.svg" alt="ícone de instagram">
+    </a>
+    <a href="http://wa.me/244972783562" target="_blank" rel="noopener noreferrer"
+       aria-label="Conversar com Isaacson pelo WhatsApp" title="Conversar com Isaacson pelo WhatsApp">
+      <img src="img/icons/whatsapp.svg" alt="ícone de whatsapp business">
+    </a>
+  </div>
+</div>
+  </div>
+  <div class="copy">
+    <p>&COPY; 2025 <a href="https://github.com/isaacsontyimanda" target="_blank" rel="noopener noreferrer" aria-label="Abrir GitHub de Isaacson em nova aba" title="Abrir GitHub de Isaacson">Dev_Isaacson</a> | <a href="#home" aria-label="Voltar para a página inicial do portfólio" title="Ir para o topo do Portfólio">Portfólio</a>. Todos os direitos reservados.</p>
+  </div>
+</footer>
+  <!-- script.js = lógica geral -->
+<script src="script.js"></script>
+<!-- email.js = módulo com import -->
+<script type="module" src="email.js"></script>
+</body>
+</html>
