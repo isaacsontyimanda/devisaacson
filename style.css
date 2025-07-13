@@ -429,11 +429,11 @@ main {
 }
 
 /*Ajustes para 360 640*/
-@media (max-width: 320px) {
+@media (max-width: 360px) {
 }
 .sidebar {
   width: 80%;
-  padding-top: 90px;
+  padding-top: 70px;
 }
 
 /* Seção Sobre Mim */
