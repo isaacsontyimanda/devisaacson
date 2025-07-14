@@ -1,11 +1,6 @@
-// email.js (ES module separado)
-
-import emailjs from "https://cdn.emailjs.com/dist/email.min.mjs";
+// email.js (sem módulos - compatível com domínios comuns)
 
 document.addEventListener("DOMContentLoaded", () => {
-  emailjs.init("PyAo3zZ6SDavSaWdV");
-
-  const USER_ID = "PyAo3zZ6SDavSaWdV";
   const SERVICE_ID = "service_ch2qh7v";
   const TEMPLATE_CONTATO = "template_ux4l55s";
   const TEMPLATE_NEWSLETTER = "template_v31nrws";
@@ -17,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (contatoForm && status) {
     contatoForm.addEventListener("submit", function (e) {
       e.preventDefault();
+
       status.innerText = "Enviando...";
 
       emailjs.sendForm(SERVICE_ID, TEMPLATE_CONTATO, contatoForm)
@@ -26,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
           contatoForm.reset();
         })
         .catch((error) => {
-          console.error("Erro:", error);
+          console.error("Erro ao enviar:", error);
           status.innerText = "Erro ao enviar. Tente novamente.";
           status.style.color = "#f00";
         });
