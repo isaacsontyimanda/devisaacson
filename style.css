@@ -1315,9 +1315,12 @@ main {
 }
 
 /* Classe para ocultar suavemente */
+/* Faz o status sumir suavemente após 5 segundos */
 .fade-out {
   opacity: 0;
+  transition: opacity 0.8s ease-in-out;
 }
+
 
 /*Alternar Fundo Claro ou Escuro*/
 #theme-toggle {
