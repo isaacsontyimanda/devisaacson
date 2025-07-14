@@ -166,3 +166,83 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateThemeIcon(shouldUseDark);
 });
+
+/* 
+  IndexNow - Envio automático de URL para mecanismos de busca compatíveis (como Bing, Yandex)
+  Autor: Isaacson Tchimanda
+  Data: 13/07/2025
+  Descrição: Este script envia automaticamente a URL atual do site para o IndexNow,
+  ajudando os buscadores a descobrirem e indexarem páginas atualizadas com mais agilidade.
+*/
+
+(function() {
+  const url = window.location.href; // Obtém a URL atual da página
+  const key = 'd1338c4d25cd428c8475887ba6734e9d'; // Sua chave de API IndexNow
+  const keyLocation = 'https://devisaacson.site/indexnow.txt'; // Caminho público onde a chave está hospedada
+
+  // Faz o envio da URL para o endpoint do IndexNow
+  fetch(`https://api.indexnow.org/indexnow?url=${encodeURIComponent(url)}&key=${key}&keyLocation=${keyLocation}`)
+    .then(response => {
+      if (response.ok) {
+        console.log('✅ URL enviada ao IndexNow com sucesso.');
+      } else {
+        console.warn('⚠️ Falha ao enviar URL ao IndexNow.', response.status);
+      }
+    })
+    .catch(error => {
+      console.error('❌ Erro ao conectar ao IndexNow:', error);
+    });
+})();
+
+/* 
+  Envio automático da URL para o IndexNow ao carregar o site
+  Autor: Isaacson Tchimanda
+  Site: devisaacson.site
+*/
+
+document.addEventListener('DOMContentLoaded', () => {
+  const url = window.location.href;
+  const key = "d1338c4d25cd428c8475887ba6734e9d";
+  const keyLocation = "https://devisaacson.site/indexnow.txt";
+
+  fetch(`https://api.indexnow.org/indexnow?url=${encodeURIComponent(url)}&key=${key}&keyLocation=${keyLocation}`)
+    .then(response => {
+      if (response.ok) {
+        showPopup("✅ URL enviada ao IndexNow com sucesso.");
+        console.log("✅ URL enviada ao IndexNow com sucesso.");
+      } else {
+        showPopup("⚠️ Falha ao enviar URL ao IndexNow.");
+        console.warn("⚠️ Falha ao enviar URL ao IndexNow.");
+      }
+    })
+    .catch(error => {
+      showPopup("❌ Erro ao conectar ao IndexNow.");
+      console.error("❌ Erro ao conectar ao IndexNow:", error);
+    });
+});
+
+// Função para exibir pop-up
+function showPopup(message) {
+  const popup = document.createElement("div");
+  popup.textContent = message;
+  popup.style.position = "fixed";
+  popup.style.bottom = "20px";
+  popup.style.right = "20px";
+  popup.style.padding = "10px 16px";
+  popup.style.background = "#222";
+  popup.style.color = "#fff";
+  popup.style.borderRadius = "8px";
+  popup.style.boxShadow = "0 2px 10px rgba(0,0,0,0.3)";
+  popup.style.zIndex = "1000";
+  popup.style.fontSize = "0.9rem";
+  popup.style.opacity = "0";
+  popup.style.transition = "opacity 0.4s ease";
+
+  document.body.appendChild(popup);
+
+  setTimeout(() => { popup.style.opacity = "1"; }, 100);
+  setTimeout(() => {
+    popup.style.opacity = "0";
+    setTimeout(() => document.body.removeChild(popup), 500);
+  }, 4000);
+}
