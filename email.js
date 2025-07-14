@@ -1,5 +1,3 @@
-// email.js (sem módulos - compatível com domínios comuns)
-
 document.addEventListener("DOMContentLoaded", () => {
   const SERVICE_ID = "service_ch2qh7v";
   const TEMPLATE_CONTATO = "template_ux4l55s";
@@ -12,19 +10,28 @@ document.addEventListener("DOMContentLoaded", () => {
   if (contatoForm && status) {
     contatoForm.addEventListener("submit", function (e) {
       e.preventDefault();
-
       status.innerText = "Enviando...";
+      status.style.opacity = "1";
+      status.classList.remove("fade-out");
 
       emailjs.sendForm(SERVICE_ID, TEMPLATE_CONTATO, contatoForm)
         .then(() => {
           status.innerText = "Mensagem enviada com sucesso!";
           status.style.color = "#0f0";
           contatoForm.reset();
+
+          setTimeout(() => {
+            status.classList.add("fade-out");
+          }, 5000);
         })
         .catch((error) => {
           console.error("Erro ao enviar:", error);
           status.innerText = "Erro ao enviar. Tente novamente.";
           status.style.color = "#f00";
+
+          setTimeout(() => {
+            status.classList.add("fade-out");
+          }, 5000);
         });
     });
   }
@@ -39,6 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const name = this.querySelector("input[name='subscriber_name']").value;
       const email = this.querySelector("input[name='subscriber_email']").value;
+
+      statusMsg.style.opacity = "1";
+      statusMsg.classList.remove("fade-out");
 
       emailjs.sendForm(SERVICE_ID, TEMPLATE_NEWSLETTER, newsletterForm)
         .then(() => {
@@ -59,12 +69,20 @@ document.addEventListener("DOMContentLoaded", () => {
           });
 
           newsletterForm.reset();
+
+          setTimeout(() => {
+            statusMsg.classList.add("fade-out");
+          }, 5000);
         })
         .catch((error) => {
           console.error("Erro ao enviar inscrição:", error);
           statusMsg.classList.remove("status-success");
           statusMsg.classList.add("status-error");
           statusMsg.innerText = "❌ Ocorreu um erro. Tente novamente.";
+
+          setTimeout(() => {
+            statusMsg.classList.add("fade-out");
+          }, 5000);
         });
     });
   }
