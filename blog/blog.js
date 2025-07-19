@@ -35,3 +35,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// Loader para a página
+// Exibe o loader por um tempo mínimo para melhorar a experiência do usuário
+const loader = document.getElementById("loader");
+
+// Simula tempo mínimo de exibição
+const MIN_LOADING_TIME = 2000;
+const startTime = Date.now();
+
+window.addEventListener("load", () => {
+  const elapsed = Date.now() - startTime;
+  const remainingTime = MIN_LOADING_TIME - elapsed;
+
+  setTimeout(() => {
+    loader.classList.add("hidden");
+  }, remainingTime > 0 ? remainingTime : 0);
+});

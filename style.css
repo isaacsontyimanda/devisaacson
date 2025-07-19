@@ -1394,4 +1394,64 @@ body.light-theme .logo-light {
   animation: icon-spin-fade 0.6s ease;
 }
 
+/* CSS para página blog */
 
+.body-b {
+  padding: 0;
+}
+
+.main-b {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px;
+  margin: auto;
+}
+
+.blog-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.blog-post {
+  background: var(--bg-bloco);
+  padding: 24px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px var(--bg-main);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.blog-post:hover {
+  transform: scale(1.01);
+}
+
+.blog-post h2 {
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+}
+
+.blog-post .meta {
+  font-size: 0.85rem;
+  color: var(--gray-light);
+  margin-bottom: 12px;
+}
+
+.blog-post p {
+  line-height: 1.6;
+}
+
+#search-bar {
+  width: 90%;
+  background: var(--bg-bloco);
+  color: var(--text-light);
+  font-size: 1rem;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  margin: 30px 0px;
+}
