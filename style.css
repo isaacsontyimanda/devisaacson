@@ -433,13 +433,6 @@ main {
 }
 .sidebar {
   width: 80%;
-  padding-top: 10px;
-}
-
-@media (min-width: 390px) {
-  .sidebar {
-    padding-bottom: 200px;
-  }
 }
 
 /* Seção Sobre Mim */
@@ -1098,7 +1091,7 @@ footer {
 
   .sidebar a {
     font-size: 1.6rem;
-    margin: 20px 0px;
+    margin: 10px 0px;
   }
 
   .links-ap {
@@ -1410,6 +1403,12 @@ body.light-theme .logo-light {
   margin: auto;
 }
 
+.content-blog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .blog-container {
   max-width: 800px;
   margin: auto;
@@ -1421,13 +1420,14 @@ body.light-theme .logo-light {
   padding: 24px;
   margin-bottom: 24px;
   border-radius: 12px;
-  box-shadow: 0 0 12px var(--bg-main);
   cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
 }
 
 .blog-post:hover {
   transform: scale(1.01);
+  box-shadow: 0px 1px 8px 2px #0000005d;
 }
 
 .blog-post h2 {
@@ -1446,12 +1446,13 @@ body.light-theme .logo-light {
 }
 
 #search-bar {
-  width: 90%;
+  width: 300px;
   background: var(--bg-bloco);
   color: var(--text-light);
   font-size: 1rem;
-  padding: 10px 16px;
   border: none;
   border-radius: 6px;
-  margin: 30px 0px;
+  box-shadow: 0px 1px 8px 2px #00000040;
+  padding: 10px 16px;
+  margin: 0px 20px;
 }

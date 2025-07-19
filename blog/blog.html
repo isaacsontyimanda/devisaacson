@@ -3,16 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dev_Isaacson | Blog Pessoal</title>
+  <title>Dev_Isaacson | Blog</title>
   <link rel="shortcut icon" href="../public/favicon.webp" type="image/x-icon">
   <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../fontawesome/css/all.min.css">
 </head>
 <body class="body-b">
   <div id="loader">
     <img src="../loader/loader-di.svg" alt="Carregando..." class="svg-loader" />
   </div>
+  <header class="card-header">
+    <div>
+      <a href="index.html"><img src="../public/logo-dark.webp" alt="Logo Dev Isaacson" class="logo logo-dark"></a>
+      <a href="index.html"><img src="../public/logo-light.webp" alt="Logo Dev Isaacson" class="logo logo-light"></a>
+    </div>
+    <div class="content-blog">
+      <div><input type="text" id="search-bar" placeholder="🔎 Buscar por título ou conteúdo..." /></div>
+      <div>
+        <button id="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
   <main class="main-b">
-  <input type="text" id="search-bar" placeholder="🔎 Buscar por título ou conteúdo..." />
   <div class="blog-container" id="posts-container"></div>
 
   <script src="blog.js"></script>
