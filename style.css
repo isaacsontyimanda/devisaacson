@@ -1491,8 +1491,3 @@ body.light-theme .logo-light {
   justify-content: center;
 }
 
-@media (max-width: 320px) {
-  .img-text {
-    flex-direction: column;
-  }
-}
