@@ -1,0 +1,92 @@
+@charset "UTF.8";
+
+/* CSS para página blog */
+h2, div.meta, p {
+    margin: 10px 0px;
+}
+
+h2 {
+    color: var(--primary-blue);
+}
+
+div.meta {
+    color: var(--gray-light);
+}
+
+.link-post {
+    font-weight: bold;
+    color: var(--primary-blue);
+    margin: 10px 0px;
+    margin-bottom: 50px;
+}
+
+.link-post:hover {
+    color: var(--blue-hover);
+}
+
+.main-b {
+    border-radius: 0px;
+    padding: 64px 32px;
+    margin: auto;
+}
+
+input#search-bar {
+    width: 225px;
+    height: 30px;
+    background: var(--bg-input-contact);
+    color: var(--text-ligth);
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+input#search-bar:focus {
+    border: none;
+}
+
+@media (max-width: 430px) {
+    .card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 120px;
+}
+
+}
+
+/* CSS para os posts */
+.area-content {
+  max-width: 900px;
+}
+
+.main-post {
+  height: 100%;
+}
+
+.title-post {
+  color: var(--primary-blue);
+  border-bottom: 1px solid var(--primary-blue);
+  padding: 20px 0px;
+  margin: 40px 0px;
+  transition: width 0.6s ease-in-out;
+}
+
+.text-post {
+  line-height: 1.85rem;
+  margin: 40px 0px;
+}
+
+.img-posts {
+  border-radius: 10px;
+  border: 1px solid var(--primary-blue);
+  margin-right: 20px;
+}
+
+.img-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

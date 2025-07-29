@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <h2>${post.title}</h2>
         <div class="meta">${post.date} • ${post.author}</div>
         <p>${post.content}</p>
+        <p class="link-post">${post.link}
       `;
       postsContainer.appendChild(postEl);
     });
