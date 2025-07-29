@@ -22,6 +22,8 @@ div.meta {
 
 .link-post:hover {
     color: var(--blue-hover);
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .main-b {
@@ -46,47 +48,31 @@ input#search-bar:focus {
 
 @media (max-width: 430px) {
     .card-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    height: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        height: 120px;
 }
 
 }
 
 /* CSS para os posts */
-.area-content {
-  max-width: 900px;
+.body-p {
+    padding: 0;
+    margin: 0;
 }
 
-.main-post {
-  height: 100%;
+.main-p {
+    padding: 64px 32px;
 }
 
 .title-post {
-  color: var(--primary-blue);
-  border-bottom: 1px solid var(--primary-blue);
-  padding: 20px 0px;
-  margin: 40px 0px;
-  transition: width 0.6s ease-in-out;
-}
-
-.text-post {
-  line-height: 1.85rem;
-  margin: 40px 0px;
+    color: var(--primary-blue);
+    margin: 10px 0px;
 }
 
 .img-posts {
-  border-radius: 10px;
-  border: 1px solid var(--primary-blue);
-  margin-right: 20px;
+    width: 100%;
 }
-
-.img-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
