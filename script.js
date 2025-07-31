@@ -136,6 +136,7 @@ if (slider && desc) {
   }
 });
 
+// CSS para botão de alternar estilos
 const toggleBtn = document.getElementById("theme-toggle");
 const icon = toggleBtn.querySelector("i");
 const body = document.body;

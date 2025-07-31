@@ -38,11 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Loader para a página
-// Exibe o loader por um tempo mínimo para melhorar a experiência do usuário
 const loader = document.getElementById("loader");
 
 // Simula tempo mínimo de exibição
-const MIN_LOADING_TIME = 2000;
+const MIN_LOADING_TIME = 1000;
 const startTime = Date.now();
 
 window.addEventListener("load", () => {
@@ -54,33 +53,3 @@ window.addEventListener("load", () => {
   }, remainingTime > 0 ? remainingTime : 0);
 });
 
-const toggleBtn = document.getElementById("theme-toggle");
-const icon = toggleBtn.querySelector("i");
-const body = document.body;
-
-function updateThemeIcon(isDark) {
-  icon.classList.remove("fa-sun", "fa-moon");
-  icon.classList.add(isDark ? "fa-moon" : "fa-sun");
-
-  // Adiciona a animação
-  icon.classList.add("spin");
-  setTimeout(() => icon.classList.remove("spin"), 600); // Remove para permitir nova animação depois
-}
-
-toggleBtn.addEventListener("click", () => {
-  const isNowLight = body.classList.toggle("light-theme");
-  updateThemeIcon(!isNowLight);
-});
-
-// Define tema inicial
-document.addEventListener("DOMContentLoaded", () => {
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const hour = new Date().getHours();
-  const shouldUseDark = prefersDark || hour < 6 || hour >= 18;
-
-  if (!shouldUseDark) {
-    body.classList.add("light-theme");
-  }
-
-  updateThemeIcon(shouldUseDark);
-});
