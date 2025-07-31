@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   const searchBar = document.getElementById("search-bar");
   const postsContainer = document.getElementById("posts-container");
@@ -15,10 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
         renderPosts(filtered);
       });
-    })
-    .catch(err => {
-      postsContainer.innerHTML = "<p>Erro ao carregar os posts.</p>";
-      console.error(err);
     });
 
   function renderPosts(posts) {
@@ -30,27 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <h2>${post.title}</h2>
         <div class="meta">${post.date} • ${post.author}</div>
         <p>${post.content}</p>
-        <p class="link-post">${post.link}</p>
+        <a class="link-post" href="post.html?slug=${post.slug}">Ver post completo</a>
       `;
       postsContainer.appendChild(postEl);
     });
   }
 });
-
-// Loader para a página
-const loader = document.getElementById("loader");
-
-// Simula tempo mínimo de exibição
-const MIN_LOADING_TIME = 1000;
-const startTime = Date.now();
-
-window.addEventListener("load", () => {
-  const elapsed = Date.now() - startTime;
-  const remainingTime = MIN_LOADING_TIME - elapsed;
-
-  setTimeout(() => {
-    loader.classList.add("hidden");
-  }, remainingTime > 0 ? remainingTime : 0);
-});
-
- 
