@@ -4,14 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Post do Blog</title>
+  <link rel="shortcut icon" href="../public/favicon.webp" type="image/x-icon">
   <link rel="stylesheet" href="blog.css" />
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../fontawesome/css/all.min.css">
 </head>
 <body class="body-p">
   <main class="main-p">
-    <h1 id="post-title" class="title-p"></h1>
-    <div class="meta" id="post-meta"></div>
-    <div id="post-content" class="text-p"></div>
+    <div class="fade-in">
+      <a href="blog.html" class="btn-voltar">← Voltar ao Blog</a>
+      <h1 id="post-title" class="title-p"></h1>
+      <div class="meta" id="post-meta"></div>
+      <div id="post-content" class="text-p"></div>
+    </div>
   </main>
+  <button id="btn-topo" title="Voltar ao topo">
+  <i class="fas fa-chevron-up"></i>
+</button>
   <script src="post.js"></script>
+  <script src="../script.js"></script>
 </body>
 </html>

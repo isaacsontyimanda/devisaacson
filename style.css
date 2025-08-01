@@ -6,7 +6,7 @@
       padding: 0;
     }
 
-    :root {
+    :root[data-theme="dark"] {
   /* Tema padrão (Dark Theme) */
   --bg-body: #0d0d0d;
   --bg-main: #060606;
@@ -26,7 +26,7 @@
 }
 
 /* Tema claro (Light Theme) */
-body.light-theme {
+:root[data-theme="light"] {
   --bg-body: #dcdcdc;                 /* Cinza suave para fundo geral */
   --bg-main: #e3e3e3;                 /* Fundo do <main> um pouco mais claro */
   --bg-header-footer: #cfcfcf;        /* Header e footer com contraste leve */
@@ -1360,11 +1360,11 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
-body.light-theme .logo-dark {
+[data-theme="light"] .logo-dark {
   display: none;
 }
 
-body.light-theme .logo-light {
+[data-theme="light"] .logo-light {
   display: inline;
 }
 
@@ -1386,3 +1386,39 @@ body.light-theme .logo-light {
 #theme-toggle i.spin {
   animation: icon-spin-fade 0.6s ease;
 }
+
+/*CSS para botão voltar ao topo*/
+#btn-topo {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease-in-out;
+  z-index: 999;
+}
+
+#btn-topo:hover {
+  background-color: var(--blue-hover);
+  transform: translateY(0) scale(1.1);
+}
+
+#btn-topo.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+

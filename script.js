@@ -136,35 +136,66 @@ if (slider && desc) {
   }
 });
 
-// CSS para botão de alternar estilos
+/* CSS para alteração entre dark theme e light theme */
+// script.js
 const toggleBtn = document.getElementById("theme-toggle");
-const icon = toggleBtn.querySelector("i");
-const body = document.body;
+const icon = toggleBtn?.querySelector("i"); // usa optional chaining para evitar erro
+const root = document.documentElement;
 
-function updateThemeIcon(isDark) {
-  icon.classList.remove("fa-sun", "fa-moon");
-  icon.classList.add(isDark ? "fa-moon" : "fa-sun");
-
-  // Adiciona a animação
-  icon.classList.add("spin");
-  setTimeout(() => icon.classList.remove("spin"), 600); // Remove para permitir nova animação depois
+function setTheme(theme) {
+  root.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+  updateThemeIcon(theme);
 }
 
-toggleBtn.addEventListener("click", () => {
-  const isNowLight = body.classList.toggle("light-theme");
-  updateThemeIcon(!isNowLight);
+function getSavedTheme() {
+  return localStorage.getItem("theme");
+}
+
+function updateThemeIcon(theme) {
+  if (!icon) return;
+  icon.classList.remove("fa-sun", "fa-moon");
+  icon.classList.add(theme === "dark" ? "fa-moon" : "fa-sun");
+
+  // Adiciona a animação de rotação
+  icon.classList.add("spin");
+  setTimeout(() => icon.classList.remove("spin"), 600);
+}
+
+toggleBtn?.addEventListener("click", () => {
+  const currentTheme = root.getAttribute("data-theme");
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
+  setTheme(newTheme);
 });
 
-// Define tema inicial
 document.addEventListener("DOMContentLoaded", () => {
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const hour = new Date().getHours();
-  const shouldUseDark = prefersDark || hour < 6 || hour >= 18;
+  let theme = getSavedTheme();
 
-  if (!shouldUseDark) {
-    body.classList.add("light-theme");
+  if (!theme) {
+    // Se não tem no localStorage, define com base na hora e preferência do sistema
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const hour = new Date().getHours();
+    theme = (prefersDark || hour < 6 || hour >= 18) ? "dark" : "light";
   }
 
-  updateThemeIcon(shouldUseDark);
+  setTheme(theme);
+});
+
+// Botão Voltar ao Topo
+const btnTopo = document.getElementById("btn-topo");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    btnTopo.classList.add("show");
+  } else {
+    btnTopo.classList.remove("show");
+  }
+});
+
+btnTopo.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 });
 

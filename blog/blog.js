@@ -1,55 +1,60 @@
+
 document.addEventListener("DOMContentLoaded", () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const slug = urlParams.get("slug");
+  const searchBar = document.getElementById("search-bar");
+  const postsContainer = document.getElementById("posts-container");
 
   fetch("posts.json")
     .then(res => res.json())
     .then(posts => {
-      const post = posts.find(p => p.slug === slug);
+      renderPosts(posts);
 
-      if (!post) {
-        document.body.innerHTML = "<p>Post não encontrado.</p>";
-        return;
-      }
-
-      document.title = post.title + " | Dev_Isaacson";
-      document.getElementById("post-title").textContent = post.title;
-      document.getElementById("post-meta").textContent = `${post.date} • ${post.author}`;
-
-      fetch(post.htmlFile)
-        .then(res => res.text())
-        .then(html => {
-          const postContent = document.getElementById("post-content");
-          postContent.innerHTML = html;
-
-          // Ativar Scroll Reveal nos elementos carregados
-          const reveals = postContent.querySelectorAll('.reveal');
-          const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-              }
-            });
-          }, { threshold: 0.1 });
-
-          reveals.forEach(reveal => {
-            observer.observe(reveal);
-          });
-        });
+      searchBar.addEventListener("input", () => {
+        const query = searchBar.value.toLowerCase();
+        const filtered = posts.filter(post =>
+          post.title.toLowerCase().includes(query) ||
+          post.content.toLowerCase().includes(query)
+        );
+        renderPosts(filtered);
+      });
     });
+
+  function renderPosts(posts) {
+    postsContainer.innerHTML = "";
+    posts.forEach(post => {
+      const postEl = document.createElement("div");
+      postEl.className = "blog-post";
+      postEl.innerHTML = `
+        <h2>${post.title}</h2>
+        <div class="meta">${post.date} • ${post.author}</div>
+        <p>${post.content}</p>
+        <a class="link-post" href="post.html?slug=${post.slug}">Ver post completo</a>
+      `;
+      postsContainer.appendChild(postEl);
+    });
+  }
 });
 
 // Botão Voltar ao Topo
 const btnTopo = document.getElementById("btn-topo");
 
 window.addEventListener("scroll", () => {
-  btnTopo.classList.toggle("show", window.scrollY > 200);
+  if (window.scrollY > 200) {
+    btnTopo.classList.add("show");
+  } else {
+    btnTopo.classList.remove("show");
+  }
 });
 
 btnTopo.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+    document.body.style.opacity = "1";
+  });
 
 /* CSS para alteração entre dark theme e light theme */
 // script.js

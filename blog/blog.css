@@ -1,52 +1,112 @@
-@charset "UTF.8";
+@charset "UTF-8";
 
-/* CSS para página blog */
-h2, div.meta, p {
-    margin: 10px 0px;
-}
-
-h2 {
-    color: var(--primary-blue);
-}
-
-div.meta {
-    color: var(--gray-light);
-}
-
-.link-post {
-    text-decoration: none;
-    font-weight: bold;
-    color: var(--primary-blue);
-    margin: 10px 0px;
-    margin-bottom: 50px;
-}
-
-.link-post:hover {
-    color: var(--blue-hover);
-    text-decoration: underline;
-    cursor: pointer;
-}
-
+/* === Layout geral do blog === */
 .main-b {
-    border-radius: 0px;
     padding: 64px 32px;
-    margin: auto;
+    margin: 0 auto;
+    max-width: 1000px;
 }
 
+/* === Barra de Busca Refinada === */
 input#search-bar {
-    width: 225px;
-    height: 30px;
-    background: var(--bg-input-contact);
-    color: var(--text-ligth);
-    border: none;
-    border-radius: 7px;
-    padding: 10px;
+  width: 100%;
+  max-width: 320px;
+  height: 42px;
+  background-color: var(--bg-input-contact);
+  color: var(--text-light);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* sombra leve sempre */
+  transition: border 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+input#search-bar::placeholder {
+    font-size: .8rem;
+  color: var(--text-light);
+  opacity: 0.6;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 input#search-bar:focus {
-    border: none;
+  border-color: var(--primary-blue);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 132, 255, 0.25); /* sombra suave azul ao focar */
+  background-color: var(--bg-input-focus, var(--bg-input-contact));
 }
 
+
+/* === Post individual === */
+.blog-post {
+    background-color: rgba(255, 255, 255, 0.02); /* Leve destaque */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-3px);
+}
+
+/* === Título e meta === */
+.blog-post h2 {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+}
+
+.blog-post .meta {
+    color: var(--gray-light);
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+
+/* === Conteúdo do resumo === */
+.blog-post p {
+    margin: 0 0 16px;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+/* === LINK COM EFEITO DE BORDA ANIMADA === */
+.link-post {
+  display: inline-block;
+  position: relative;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--primary-blue);
+  padding-bottom: 3px;
+  text-decoration: none;
+}
+
+.link-post::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--blue-hover);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.link-post:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.link-post:hover {
+  color: var(--blue-hover);
+  cursor: pointer;
+}
+
+/* === Responsividade da barra superior (se tiver cabeçalho) === */
 @media (max-width: 430px) {
     .card-header {
         display: flex;
@@ -55,57 +115,179 @@ input#search-bar:focus {
         justify-content: center;
         gap: 10px;
         height: 120px;
+    }
 }
 
-}
-
-/* CSS para os posts */
+/* === Página interna do post === */
 .body-p {
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 .main-p {
+    border-radius: 0px;
     padding: 32px;
-    margin: 0px auto;
+    margin: 0 auto;
+    max-width: 900px;
 }
 
 .title-p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: var(--primary-blue);
-    margin: 10px 0px;
+    margin-bottom: 16px;
 }
 
 .img-post {
     width: 100%;
-    border-radius: 7px;
-    margin: 10px 0px;
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
 }
 
 .text-p {
     font-size: 1rem;
-    font-weight: normal;
-    line-height: 1.5rem;
-    margin: 20px 0px;
+    line-height: 1.7rem;
+    margin: 20px 0;
+    color: var(--text-light);
 }
 
+/* === Melhor visualização em telas médias/grandes === */
 @media (min-width: 600px) {
-
     .title-p {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .text-p {
-        max-width: 750px;
         font-size: 1.1rem;
         text-align: justify;
         line-height: 1.8rem;
     }
 
-.img-post {
-    width: 500px;
+    .img-post {
+        width: 500px;
+    }
 }
 
+.btn-voltar {
+  display: inline-block;
+  margin-bottom: 24px;
+  padding: 10px 16px;
+  background-color: var(--primary-blue);
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
+.btn-voltar:hover {
+  background-color: var(--blue-hover);
+  transform: translateX(-4px);
+}
+
+/*CSS para botão voltar ao topo*/
+#btn-topo {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease-in-out;
+  z-index: 999;
+}
+
+#btn-topo:hover {
+  background-color: var(--blue-hover);
+  transform: translateY(0) scale(1.1);
+}
+
+#btn-topo.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ========== Animações Utilitárias ========== */
+
+/* Fade-in (com leve subida) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/*CSS para footer*/
+.footer-blog {
+  background-color: var(--bg-header-footer);
+  color: var(--text-light);
+  padding: 40px 20px 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.footer-content-blog {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-social-blog h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--primary-blue);
+}
+
+.footer-icons-blog {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.footer-icons-blog a img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.footer-icons-blog a:hover img {
+  transform: scale(1.15);
+}
+
+.footer-copy-blog {
+  margin-top: 25px;
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+.footer-copy-blog a {
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+.footer-copy-blog a:hover {
+  text-decoration: underline;
+}
