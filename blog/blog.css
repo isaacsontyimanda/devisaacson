@@ -42,7 +42,7 @@ input#search-bar:focus {
 
 /* === Post individual === */
 .blog-post {
-    background-color: rgba(255, 255, 255, 0.02); /* Leve destaque */
+    background: var(--bg-blog-link); /* Leve destaque */
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 32px;
@@ -160,7 +160,7 @@ input#search-bar:focus {
 
     .text-p {
         font-size: 1.1rem;
-        text-align: justify;
+        
         line-height: 1.8rem;
     }
 

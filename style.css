@@ -13,6 +13,7 @@
   --bg-header-footer: #0A0F1F;
   --bg-bloco: #0e1629;
   --bg-badge: #222222;
+  --bg-blog-link: #ffffff05;
   --color-badge: #ffa500;
   --bg-input-contact: #1b1b1b;
   --bg-newsl: #cccccc;
@@ -31,7 +32,8 @@
   --bg-main: #e3e3e3;                 /* Fundo do <main> um pouco mais claro */
   --bg-header-footer: #cfcfcf;        /* Header e footer com contraste leve */
   --bg-bloco: #bfbfbf;                /* Blocos com cinza médio */
-  --bg-badge: #e0d4b7;                /* Bege acinzentado */
+  --bg-badge: #e0d4b7;
+  --bg-blog-link: #ffffff67;                /* Bege acinzentado */
   --color-badge: #a8741a;             /* Marrom dourado suave */
   --bg-input-contact: #d0d0d0;        /* Inputs em cinza claro */
   --bg-newsl: #e6e6e6;                /* Fundo neutro para newsletter */
