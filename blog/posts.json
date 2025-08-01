@@ -3,7 +3,7 @@
     "title": "Como começar no Design com o pé direito em 2025?",
     "slug": "como-comecar-no-design",
     "author": "Isaacson Tchimanda",
-    "date": "2025-07-15",
+    "date": "2025-08-01",
     "content": "Neste post conto como dei os primeiros passos na área de design e depois frontend...",
     "htmlFile": "posts/html/post001.html"
   },
@@ -12,20 +12,20 @@
     "author": "Isaacson Tchimanda",
     "date": "2025-07-15",
     "content": "História real e dicas para quem acha que precisa desenhar para ser designer gráfico ou digital...",
-    "link": "<a href='posts/post002.html'>Ver post completo</a>"
+    "htmlFile": "posts/html/post002.html"
   },
   {
     "title": "Aprenda programar sem matemática pesada!",
     "author": "Isaacson Tchimanda",
     "date": "2025-07-15",
     "content": "Nem toda programação exige contas complexas. Veja como iniciei sem medo e sem trauma com números!",
-    "link": "<a href='posts/post003.html'>Ver post completo</a>"
+    "htmlFile": "posts/html/post003.html"
   },
   {
     "title": "Dicas para montar seu portfólio profissional",
     "author": "Isaacson Tchimanda",
     "date": "2025-07-12",
     "content": "Sabia que um portfólio bem feito pode abrir portas? Veja o que aprendi desenvolvendo o meu e o que recomendo a quem está começando.",
-    "link": "<a href='posts/post004.html'>Ver post completo</a>"
+    "htmlFile": "posts/html/post004.html"
   }
 ]
