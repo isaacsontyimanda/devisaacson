@@ -118,57 +118,108 @@ input#search-bar:focus {
     }
 }
 
-/* === Página interna do post === */
+/* === Página do Post === */
 .body-p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-body);
+  color: var(--text-light);
 }
 
+/* === Estrutura Principal === */
 .main-p {
-    border-radius: 0px;
-    padding: 32px;
-    margin: 0 auto;
-    max-width: 900px;
+  padding: 34px 20px;
+  margin: 0 auto;
+  max-width: 900px;
+  border-radius: 0px;
 }
 
+/* === Container de Conteúdo === */
+.post-content {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+}
+
+/* === Título e Data === */
 .title-p {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--primary-blue);
-    margin-bottom: 16px;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: var(--primary-blue);
 }
 
-.img-post {
-    width: 100%;
-    max-width: 100%;
-    border-radius: 10px;
-    margin: 20px 0;
+.meta {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  opacity: 0.65;
+  margin-bottom: 1.5rem;
 }
 
+/* === Parágrafos === */
 .text-p {
-    font-size: 1rem;
-    line-height: 1.7rem;
-    margin: 20px 0;
-    color: var(--text-light);
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
 }
 
-/* === Melhor visualização em telas médias/grandes === */
-@media (min-width: 600px) {
-    .title-p {
-        font-size: 2.5rem;
-    }
-
-    .text-p {
-        font-size: 1.1rem;
-        
-        line-height: 1.8rem;
-    }
-
-    .img-post {
-        width: 500px;
-    }
+/* === Subtítulos === */
+.subtitle-post {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin: 2rem 0 1rem;
 }
 
+/* === Imagens do Post === */
+.img-post {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 1.2rem 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.img-post:hover {
+  transform: scale(1.01);
+}
+
+/* === Listas Personalizadas === */
+ul.text-p {
+  padding-left: 1.4rem;
+  margin-bottom: 1.2rem;
+}
+
+ul.text-p li {
+  margin-bottom: 0.6rem;
+  list-style: "🔹 ";
+}
+
+/* === Links === */
+.text-p a {
+  color: var(--primary-blue);
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.text-p a:hover {
+  color: var(--primary-blue-hover);
+}
+
+/* === Bloco de Destaque (Ex: conclusão, observação) === */
+.conclusao {
+  background: var(--bg-header-footer);
+  border-left: 4px solid var(--primary-blue);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+/* CSS para botão voltar */
 .btn-voltar {
   display: inline-block;
   margin-bottom: 24px;
@@ -240,13 +291,71 @@ input#search-bar:focus {
   animation: fadeIn 1s ease-in-out forwards;
 }
 
+/* CSS do comentário */
+.comments-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+#comment-text {
+  width: 100%;
+  min-height: 100px;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  resize: vertical;
+}
+
+.btn-comentario {
+  align-self: flex-end;
+  background-color: var(--primary-blue);
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn-comentario:hover {
+  background-color: var(--primary-blue-hover);
+}
+
+#comment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#comment-list li {
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+
 /*CSS para footer*/
 .footer-blog {
   background-color: var(--bg-header-footer);
   color: var(--text-light);
   padding: 40px 20px 20px;
   text-align: center;
-  margin-top: 60px;
+  margin: 0px;
 }
 
 .footer-content-blog {
