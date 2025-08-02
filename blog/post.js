@@ -95,3 +95,64 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setTheme(theme);
 });
+
+const form = document.getElementById("comment-form");
+const textArea = document.getElementById("comment-text");
+const list = document.getElementById("comment-list");
+
+// Carregar comentários do localStorage
+window.addEventListener("DOMContentLoaded", () => {
+  const comments = JSON.parse(localStorage.getItem("blog_comments")) || [];
+  comments.forEach(comment => addComment(comment));
+});
+
+// Adicionar comentário
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const comment = textArea.value.trim();
+  if (comment === "") return;
+
+  addComment(comment);
+  saveComment(comment);
+  textArea.value = "";
+});
+
+function addComment(text) {
+  const li = document.createElement("li");
+  li.textContent = text;
+  list.appendChild(li);
+}
+
+function saveComment(comment) {
+  const comments = JSON.parse(localStorage.getItem("blog_comments")) || [];
+  comments.push(comment);
+  localStorage.setItem("blog_comments", JSON.stringify(comments));
+}
+
+function loadComments() {
+  const commentList = document.getElementById("comment-list");
+  commentList.innerHTML = "";
+
+  const comments = JSON.parse(localStorage.getItem("comments") || "[]");
+
+  comments.forEach((comment, index) => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      ${comment}
+      <button class="btn-delete" onclick="deleteComment(${index})" title="Excluir comentário">
+        <i class="fas fa-trash"></i>
+      </button>
+    `;
+    commentList.appendChild(li);
+  });
+}
+
+function deleteComment(index) {
+  const comments = JSON.parse(localStorage.getItem("comments") || "[]");
+  comments.splice(index, 1); // Remove 1 item na posição index
+  localStorage.setItem("comments", JSON.stringify(comments));
+  loadComments(); // Recarrega a lista
+}
+
+// Garante que comentários sejam carregados ao abrir o post
+document.addEventListener("DOMContentLoaded", loadComments);
