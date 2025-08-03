@@ -179,6 +179,7 @@ input#search-bar:focus {
   max-width: 100%;
   border-radius: 12px;
   margin: 1.2rem 0;
+  margin-bottom: 0;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   object-fit: cover;
   transition: transform 0.3s ease;
@@ -186,6 +187,12 @@ input#search-bar:focus {
 
 .img-post:hover {
   transform: scale(1.01);
+}
+
+/* CSS para <i> */
+figcaption {
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 /* === Listas Personalizadas === */
